@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_0806_Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="884,1507" sap2010:WorkflowViewState.IdRef="_0806_Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_0806_Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,1839" sap2010:WorkflowViewState.IdRef="_0806_Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="62">
       <x:String>System.Activities</x:String>
@@ -36,7 +36,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="30">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="60">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -67,9 +67,10 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="메인" sap:VirtualizedContainerService.HintSize="518,1442" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="메인" sap:VirtualizedContainerService.HintSize="518,1774" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="Filepdf" />
       <Variable x:TypeArguments="x:String" Name="variable1" />
@@ -94,7 +95,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="1.파일 폴더 목록 가져오기&#xD;&#xA;2.현재시간 변수 저장&#xD;&#xA;" DisplayName="초기저리 - Sequence" sap:VirtualizedContainerService.HintSize="476,123" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="1.파일 폴더 목록 가져오기&#xD;&#xA;2.현재시간 변수 저장&#xD;&#xA;" DisplayName="초기저리 - Sequence" sap:VirtualizedContainerService.HintSize="476,440" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="FileName" />
         <Variable x:TypeArguments="x:String" Name="fff" />
@@ -102,7 +103,7 @@
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
@@ -132,7 +133,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="1.PDF 파일 데이터 추출&#xD;&#xA;2.데이터 가공&#xD;&#xA;3.EXCEL 데이터 입력&#xD;&#xA;4.EXCEL 셀 색상 삽입" DisplayName="주처리 - Sequence" sap:VirtualizedContainerService.HintSize="476,1039" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <Sequence sap2010:Annotation.AnnotationText="1.PDF 파일 데이터 추출&#xD;&#xA;2.데이터 가공&#xD;&#xA;3.EXCEL 데이터 입력&#xD;&#xA;4.EXCEL 셀 색상 삽입&#xD;&#xA;5.삽임" DisplayName="주처리 - Sequence" sap:VirtualizedContainerService.HintSize="476,1054" sap2010:WorkflowViewState.IdRef="Sequence_9">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -233,7 +234,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <Sequence sap2010:Annotation.AnnotationText="1.파일명,Cas번호,개수 입력&#xD;&#xA;2.입력된 파일마다 색 추가&#xD;&#xA;&#xD;&#xA;" DisplayName="엑셀 - Sequence" sap:VirtualizedContainerService.HintSize="953,1729" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <Sequence sap2010:Annotation.AnnotationText="1.파일명,Cas번호,개수 입력&#xD;&#xA;2.입력된 파일마다 색 추가&#xD;&#xA;&#xD;&#xA;" DisplayName="엑셀 - Sequence" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="Sequence_13">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
